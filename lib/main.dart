@@ -35,52 +35,56 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  TextStyle customStyle() {
+    return TextStyle(fontSize: 24, color: Colors.red);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text(
-            "Amazon",
-            style: TextStyle(
-              fontFamily: "Billabong",
-              fontSize: 32,
+      appBar: AppBar(
+        title: Text("UI"),
+      ),
+      body: Center(
+        child: Row(
+          children: [
+            Text(
+              "User",
+              style: customStyle(),
             ),
-          ),
+            Text(
+              "Interface",
+              style: customStyle().copyWith(color: Colors.green),
+            ),
+          ],
         ),
-        body: Center(
-          child: Text(
-            "Welcome to Amazon",
-            style: TextStyle(fontSize: 30),
-          ),
-        )
-        // Stack(
-        //   children: [
-        //     Center(
-        //       child: Container(
-        //         width: 200,
-        //         height: 200,
-        //         decoration: BoxDecoration(
-        //           shape: BoxShape.circle,
-        //           image: DecorationImage(
-        //               fit: BoxFit.fill,
-        //               image: Image.asset("assets/images/img1.jpg").image),
-        //         ),
-        //       ),
-        //     ),
-        //     SafeArea(
-        //       child: Container(
-        //         width: double.infinity,
-        //         child: Column(
-        //           mainAxisAlignment: MainAxisAlignment.end,
-        //           crossAxisAlignment: CrossAxisAlignment.center,
-        //           children: [Text("from Amazon")],
-        //         ),
-        //       ),
-        //     ),
-        //   ],
-        // ),
-
-        );
+      ),
+      // Stack(
+      //   children: [
+      //     Center(
+      //       child: Container(
+      //         width: 200,
+      //         height: 200,
+      //         decoration: BoxDecoration(
+      //           shape: BoxShape.circle,
+      //           image: DecorationImage(
+      //               fit: BoxFit.fill,
+      //               image: Image.asset("assets/images/img1.jpg").image),
+      //         ),
+      //       ),
+      //     ),
+      //     SafeArea(
+      //       child: Container(
+      //         width: double.infinity,
+      //         child: Column(
+      //           mainAxisAlignment: MainAxisAlignment.end,
+      //           crossAxisAlignment: CrossAxisAlignment.center,
+      //           children: [Text("from Amazon")],
+      //         ),
+      //       ),
+      //     ),
+      //   ],
+      // ),
+    );
   }
 }
